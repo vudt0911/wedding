@@ -12,10 +12,14 @@
     <!-- Wow Animate library -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/animate.min.css">
     <script src="bootstrap/js/wow.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>
     new WOW().init();
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -26,7 +30,6 @@
                     <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-id" data-slide-to="1" class=""></li>
                     <li data-target="#carousel-id" data-slide-to="2" class=""></li>
-<!--                    <li data-target="#carousel-id" data-slide-to="3" class=""></li>-->
                 </ol>
                 <div class="carousel-inner img-rounded">
                     <div class="item active">
@@ -49,16 +52,6 @@
                             </div>
                         </div>
                     </div>
-<!--                    <div class="item">-->
-<!--                        <img src="images/slide3.jpg" width="80%">-->
-<!--                        <div class="container">-->
-<!--                            <div class="carousel-caption">-->
-<!--                                <h1>Duy & Hà</h1>-->
-<!--                                <h2>Are getting married</h2>-->
-<!--                                <h3>05.11.2022</h3>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
                     <div class="item">
                         <img src="images/slide4.jpg" width="100%">
                         <div class="container">
@@ -102,15 +95,23 @@
         </section>
         <!-- /navbar -->
         <section id="about">
-            <div class="page-header text-center wow flash" data-wow-delay="0.5s" data-wow-duration="2.5s" data-wow-iteration="5">
+            <div class="page-header text-center wow flash" data-wow-delay="0.5s" data-wow-duration="2.5s"
+                data-wow-iteration="5">
                 <h1 class="gradient-text">Duy & Hà</h1>
             </div>
             <img src="images/hoaCuoi.jpg" alt="hoaCuoi" width="100%" class="img-rounded">
             <div class="text wow zoomIn" data-wow-delay="0.6s">
-                <p><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</i></p>
+                <p><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</i>
+                </p>
             </div>
             <div class="text-center">
-                <button type="button" class="btn btn-default btn-lg wow rubberBand" data-wow-delay="0.6s">Wedding Details</button>
+                <button type="button" class="btn btn-default btn-lg wow rubberBand" data-wow-delay="0.6s">Wedding
+                    Details</button>
             </div>
         </section>
         <!-- /about -->
@@ -152,13 +153,15 @@
         <section id="contact" class="text-center">
             <h2 class="wow bounceInUp">HOPE YOU CAN MAKE IT!</h2>
             <h4 class="wow bounceInUp">Kindly Respond By November, 2022</h4>
-            <button type="button" class="btn btn-danger btn-lg wow rubberBand" data-wow-duration="2s" data-wow-delay="0.7s" data-toggle="modal" data-target="#myModal">Contact Us</button>
+            <button type="button" class="btn btn-danger btn-lg wow rubberBand" data-wow-duration="2s" data-wow-delay="0.7s"
+                data-toggle="modal" data-target="#myModal">Contact Us</button>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                             <h2 class="modal-title" id="myModalLabel">CAN YOU COME?</h2>
                             <br>
                             <p>We really really hope you can make it!</p>
@@ -177,39 +180,35 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div id="googleMap" style="width:100%;height:400px;"></div>
-            <script>
-            function myMap() {
-                var mapProp = {
-                    center: new google.maps.LatLng(51.508742, -0.120850),
-                    zoom: 5,
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-            <!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-        </section>
+        <!-- <section>
+                    <div id="googleMap" style="width:100%;height:400px;"></div>
+                    <script>
+                        function myMap() {
+                            var mapProp = {
+                                center: new google.maps.LatLng(51.508742, -0.120850),
+                                zoom: 5,
+                            };
+                            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                        }
+                    </script>
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+                </section> -->
         <footer class="text-center wow rotateInDownLeft">
             <div class="row">
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-md-offset-1">
                     <h4><big><big><big>Coppyright @2022 Wedding by VuDT</big></big></big></h4>
                 </div>
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <a href="#myPage" type="button" class="btn btn-info wow rubberBand" data-wow-delay="2.2s" data-wow-duration="2s"><big><big>Back To Top</big></big></a>
+                    <a href="#myPage" type="button" class="btn btn-info wow rubberBand" data-wow-delay="2.2s"
+                        data-wow-duration="2s"><big><big>Back To Top</big></big></a>
                 </div>
             </div>
         </footer>
     </div>
     <!-- end container -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap/jquery/jquery-3.2.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/phaoHoa.js" ></script>
+   
     <!-- Code Thanh cuon muot ma! -->
     <script src="js/javascript.js"></script>
 </body>
